@@ -10,14 +10,10 @@ on:
 jobs:
   build:
     steps:
-      -name: checkout source
        uses: actions/checkout@v3
-      -name: login to docker hub
+       -name: login to docker hub
        run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
-      -name: Build docker image
+       -name: Build docker image
        run: docker build -t anandbvenkataiah/simple-nodejs
-      -name: publish image to docker hub
+       -name: publish image to docker hub
        run: docker push anandbvenkataiah/simple-nodejs:latest
-
-  deploy:
-    
