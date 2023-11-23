@@ -17,7 +17,7 @@ jobs:
       -name: Build docker image
        run: docker build -t anandbvenkataiah/simple-nodejs
       -name: publish image to docker hub
-       run: docket push anandbvenkataiah/simple-nodejs:latest
+       run: docker push anandbvenkataiah/simple-nodejs:latest
 
   deploy:
     
